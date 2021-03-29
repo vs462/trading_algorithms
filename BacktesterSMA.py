@@ -14,7 +14,6 @@ class SMABacktester():
         self.SMA_L = SMA_L
         self.start = start
         self.end = end
-        #self.results = None 
         self.get_data()
         
     def __repr__(self):
@@ -35,10 +34,10 @@ class SMABacktester():
     def set_parameters(self, SMA_S = None, SMA_L = None):
         ''' Updates SMA parameters and resp. time series.
         '''
-        if SMA_S is not None:
+        if SMA_S :
             self.SMA_S = SMA_S
             self.data["SMA_S"] = self.data["price"].rolling(self.SMA_S).mean()
-        if SMA_L is not None:
+        if SMA_L :
             self.SMA_L = SMA_L
             self.data["SMA_L"] = self.data["price"].rolling(self.SMA_L).mean()
             
