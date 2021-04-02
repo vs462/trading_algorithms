@@ -82,4 +82,3 @@ x = plot_SMA(df)
 
 
 
-
